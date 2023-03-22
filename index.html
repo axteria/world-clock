@@ -10,12 +10,28 @@
     <title>World Clock</title>
   </head>
   <body>
-    <div class="container">
+    <div class="wrapper">
       <h1>World Clock</h1>
       <select name="city" id="city">
+        <option value="">Select a city...</option>
+        <option value="currentCity">Current City</option>
         <option value="LA">Los Angeles</option>
+        <option value="london">London</option>
+        <option value="NY">New York</option>
+        <option value="auckland">Auckland</option>
       </select>
+
+      <div class="preset-cities">
+        <h2>Los Angeles</h2>
+        <div class="date">August 15th 2022</div>
+        <div class="time">1.30.14 AM</div>
+        <h2>Sydney</h2>
+        <div class="date">August 15th 2022</div>
+        <div class="time">1.30.14 AM</div>
+      </div>
     </div>
+
+    <br />
     <footer>
       This project was coded by <a href="https://github.com/axteria">F.Wu</a>
     </footer>
