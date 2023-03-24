@@ -43,7 +43,8 @@ function updateCity(event) {
     <span class="date">${cityDate}</span>
     </div>
     <div class="time">${cityTime}</div>
-    </div>`;
+    </div>
+    <a href="/" class="back">◀ All Cities</a>`;
 }
 let citySelectElement = document.querySelector("#city");
 citySelectElement.addEventListener("change", updateCity);

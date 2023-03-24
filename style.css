@@ -14,6 +14,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
+a {
+  text-decoration: none;
+}
+a:active {
+  color: rgb(111, 76, 168);
+}
+
 select {
   font-size: large;
   padding: 10px;
@@ -52,7 +59,12 @@ h2 {
   vertical-align: middle;
 }
 
+.back {
+  font-size: smaller;
+}
+
 footer {
   text-align: center;
   font-size: smaller;
+  margin-top: -50px;
 }
