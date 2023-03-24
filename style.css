@@ -24,6 +24,7 @@ select {
 }
 
 .preset-cities {
+  text-align: left;
   display: flex;
   justify-content: space-between;
   margin: 20px;
