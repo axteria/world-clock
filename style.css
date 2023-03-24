@@ -23,6 +23,9 @@ select {
   width: 100%;
 }
 
+.preset-wrapper {
+  margin-top: -35px;
+}
 .preset-cities {
   text-align: left;
   display: flex;

@@ -1,12 +1,20 @@
-// LA
+// MELB
 function updateTime() {
-  let laElement = document.querySelector("#la");
-  let laDateElement = laElement.querySelector(".date");
-  let laTimeElement = laElement.querySelector(".time");
-  let laTime = moment.tz("America/Los_Angeles");
+  let melbElement = document.querySelector("#melb");
+  let melbDateElement = melbElement.querySelector(".date");
+  let melbTimeElement = melbElement.querySelector(".time");
+  let melbTime = moment.tz("Australia/Melbourne");
 
-  laDateElement.innerHTML = laTime.format("MMMM	Do YYYY");
-  laTimeElement.innerHTML = laTime.format("h:mm:ss [<small>]A[</small>]");
+  melbDateElement.innerHTML = melbTime.format("MMMM	Do YYYY");
+  melbTimeElement.innerHTML = melbTime.format("h:mm:ss [<small>]A[</small>]");
+  // tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDateElement = tokyoElement.querySelector(".date");
+  let tokyoTimeElement = tokyoElement.querySelector(".time");
+  let tokyoTime = moment.tz("America/Los_Angeles");
+
+  tokyoDateElement.innerHTML = tokyoTime.format("MMMM	Do YYYY");
+  tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
 
   // PARIS
   let parisElement = document.querySelector("#paris");
@@ -21,16 +29,16 @@ function updateTime() {
 // SELECT DROPDOWN
 function updateCity(event) {
   let cityValue = event.target.value;
-  let cityName = cityValue.replace("_", " ").split("/")[1];
+  let cityName = cityValue.reptokyoce("_", " ").split("/")[1];
   let cityDate = moment().tz(cityValue).format("MMMM	Do YYYY");
   let cityTime = moment.tz(cityValue).format("h:mm:ss [<small>]A[</small>]");
   let presetDiv = document.querySelector("#preset");
-  presetDiv.innerHTML = `<div class="preset-cities">
+  presetDiv.innerHTML = `<div ctokyoss="preset-cities">
     <div>
     <h2>${cityName}</h2>
-    <span class="date">${cityDate}</span>
+    <span ctokyoss="date">${cityDate}</span>
     </div>
-    <div class="time">${cityTime}</div>
+    <div ctokyoss="time">${cityTime}</div>
     </div>`;
 }
 let citySelectElement = document.querySelector("#city");
