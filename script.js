@@ -7,7 +7,8 @@ function updateTime() {
 
   melbDateElement.innerHTML = melbTime.format("MMMM	Do YYYY");
   melbTimeElement.innerHTML = melbTime.format("h:mm:ss [<small>]A[</small>]");
-  // tokyo
+
+  // TOKYO
   let tokyoElement = document.querySelector("#tokyo");
   let tokyoDateElement = tokyoElement.querySelector(".date");
   let tokyoTimeElement = tokyoElement.querySelector(".time");
@@ -29,16 +30,19 @@ function updateTime() {
 // SELECT DROPDOWN
 function updateCity(event) {
   let cityValue = event.target.value;
-  let cityName = cityValue.reptokyoce("_", " ").split("/")[1];
+  if (cityValue == "current") {
+    cityValue = moment.tz.guess();
+  }
+  let cityName = cityValue.replace("_", " ").split("/")[1];
   let cityDate = moment().tz(cityValue).format("MMMM	Do YYYY");
   let cityTime = moment.tz(cityValue).format("h:mm:ss [<small>]A[</small>]");
   let presetDiv = document.querySelector("#preset");
-  presetDiv.innerHTML = `<div ctokyoss="preset-cities">
+  presetDiv.innerHTML = `<div class="preset-cities">
     <div>
     <h2>${cityName}</h2>
-    <span ctokyoss="date">${cityDate}</span>
+    <span class="date">${cityDate}</span>
     </div>
-    <div ctokyoss="time">${cityTime}</div>
+    <div class="time">${cityTime}</div>
     </div>`;
 }
 let citySelectElement = document.querySelector("#city");
